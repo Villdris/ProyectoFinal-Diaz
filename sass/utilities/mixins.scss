@@ -1,0 +1,9 @@
+@mixin grid ($grid, $columns, $rows, $justify-content, $align-items, $areas, $gap){
+    display: $grid;
+    grid-template-columns: $columns;
+    grid-template-rows: $rows;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    grid-template-areas: $areas;
+    gap: $gap;
+}
