@@ -1,11 +1,13 @@
 /*      UTILITIES   */
 @import "./utilities/_variables.scss";
+@import "./utilities/mixins.scss";
 
 /*   BASE   */
 @import "./base/_general.scss";
 
 /*  COMPONENTS  */
 @import "./components/_bootstrap.scss";
+@import "./components/navbar";
 
 /* LAYOUT  */
 @import "./layout/_header.scss";

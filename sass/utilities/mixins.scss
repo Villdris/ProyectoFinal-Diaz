@@ -7,3 +7,11 @@
     grid-template-areas: $areas;
     gap: $gap;
 }
+
+@mixin flex ($display, $justify-content, $align-items, $gap, $flex-wrap){
+    display: $display;
+    justify-content: $justify-content;
+    align-items: $align-items;
+    gap: $gap;
+    flex-wrap: $flex-wrap;
+}

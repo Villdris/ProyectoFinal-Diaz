@@ -1,0 +1,22 @@
+nav{
+    position: sticky;
+    top: 0;
+    .navbar{
+        font-family: "Cormorant";
+        font-weight: 900;
+        font-size: 3rem;
+        list-style: none;
+        color: $color-naranjosuave;
+        background-color: $color-verde;
+        @include flex (flex, space-around, center, 20px, wrap);
+        .nav_li{
+            .nav_icon{
+                width: 40px;
+            }
+            a{
+                color: $color-naranjosuave;
+                text-decoration: none;
+            }
+        }
+    }
+}
