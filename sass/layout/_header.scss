@@ -26,6 +26,7 @@
     }
     .logo{
         width: 400px;
+        margin-top: 10px;
         border-radius:50%;
         -webkit-border-radius:50%;
         -moz-border-radius:50%;
@@ -46,7 +47,7 @@
 
 .header_plantas{
     @extend .header_gatos;
-    background-position-y: -450px;
+    background-position-y: -350px;
 }
 
 .header_consejos{
@@ -57,4 +58,141 @@
 .header_galeria{
     @extend .header_consejos;
     background-position-y: -1000px;
+}
+
+@media ( max-width: 1320px){
+    .header_gatos{
+        height: 250px;
+        background-position-y: -800px;
+        h1{
+            font-size: 7rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        .logo{
+            width: 200px;
+        }
+    }
+    .header_plantas{
+        background-position-y: -300px;
+    }
+
+    .header_galeria{
+        background-position-y: -800px;
+    }
+}
+
+@media ( max-width: 1068px){
+    .header_gatos{
+        height: 200px;
+        background-position-y: -700px;
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .logo{
+            width: 150px;
+        }
+    }
+
+    .header_plantas{
+        background-position-y: -250px;
+    }
+
+    .header_galeria{
+        background-position-y: -700px;
+    }
+}
+
+@media ( max-width: 990px) {
+    .header_index{
+        height: 600px;
+        background-position-y: -100px;
+        gap: 0;
+        h1{
+            font-size: 7rem;
+        }
+        p{
+            font-size: 2rem;
+        }
+        .logo{
+            width: 300px;
+        }
+    }
+
+    .header_gatos{
+        height: 200px;
+        background-position-y: -600px;
+        h1{
+            font-size: 4rem;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .logo{
+            width: 150px;
+        }
+    }
+
+    .header_plantas{
+        background-position-y: -600px;
+    }
+    
+}
+
+@media ( max-width: 818px){
+    .header_gatos{
+        background-position-y: -500px;
+    }
+    
+    .header_plantas{
+        background-position-y: -160px;
+    }
+
+    .header_galeria{
+        background-position-y: -500px;
+    }
+}
+
+@media ( max-width: 720px ){
+    .header_index{
+        height: 600px;
+        background-position-y: 0px;
+        h1{
+            font-size: 5rem;
+            margin: 10px;
+        }
+        p{
+            font-size: 1.5rem;
+        }
+        .logo{
+            width: 200px;
+        }
+    }
+
+    
+    .header_gatos{
+        background-position-y: -265px;
+        height: 300px;
+        .logo{
+            width: 0;
+        }
+    }
+
+    .header_plantas{
+        background-position-y: 0;
+    }
+
+    .header_galeria{
+        background-position-y: -260px;
+    }
+}
+
+@media (max-width: 414px){
+    .header_gatos{
+        background-position-x: -100px;
+    }
 }

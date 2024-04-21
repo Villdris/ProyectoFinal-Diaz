@@ -8,7 +8,10 @@
 /*  COMPONENTS  */
 @import "./components/_bootstrap.scss";
 @import "./components/navbar";
+@import "./components/animista";
 
 /* LAYOUT  */
 @import "./layout/_header.scss";
 @import "./layout/body";
+@import "./layout/main";
+@import "./layout/footer";

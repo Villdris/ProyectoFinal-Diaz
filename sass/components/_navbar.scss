@@ -6,16 +6,44 @@ nav{
         font-weight: 900;
         font-size: 3rem;
         list-style: none;
+        box-shadow: 0 3px 50px black;
         color: $color-naranjosuave;
-        background-color: $color-verde;
-        @include flex (flex, space-around, center, 20px, wrap);
+        background-color: $color-verdetrans;
+        @include flex (flex, space-evenly, center, 5px, wrap);
         .nav_li{
+            text-shadow: 0 3px 5px black;
+            &:hover{
+                text-shadow: 0 9px 15px black;
+                transform: scale(1.2);
+                -webkit-transform: scale(1.2);
+                -moz-transform: scale(1.2);
+                -ms-transform: scale(1.2);
+                -o-transform: scale(1.2);
+                transition: all 300ms linear;
+                -webkit-transition: all 300ms linear;
+                -moz-transition: all 300ms linear;
+                -ms-transition: all 300ms linear;
+                -o-transition: all 300ms linear;
+            }
             .nav_icon{
                 width: 40px;
             }
             a{
                 color: $color-naranjosuave;
                 text-decoration: none;
+            }
+        }
+    }
+}
+
+@media (max-width: 1070px){
+    nav{
+        .navbar{
+            font-size: 2rem;
+            .nav_li{
+                .nav_icon{
+                    width: 30px;
+                }
             }
         }
     }
