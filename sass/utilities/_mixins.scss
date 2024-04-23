@@ -1,11 +1,9 @@
-@mixin grid ($grid, $columns, $rows, $justify-content, $align-items, $areas, $gap){
+@mixin grid ($grid, $columns, $rows, $justify-content, $align-items){
     display: $grid;
     grid-template-columns: $columns;
     grid-template-rows: $rows;
     justify-content: $justify-content;
     align-items: $align-items;
-    grid-template-areas: $areas;
-    gap: $gap;
 }
 
 @mixin flex ($display, $justify-content, $align-items, $gap, $flex-wrap){

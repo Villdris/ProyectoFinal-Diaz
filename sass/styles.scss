@@ -1,17 +1,18 @@
 /*      UTILITIES   */
 @import "./utilities/_variables.scss";
-@import "./utilities/mixins.scss";
+@import "./utilities/_mixins.scss";
 
 /*   BASE   */
 @import "./base/_general.scss";
 
 /*  COMPONENTS  */
 @import "./components/_bootstrap.scss";
-@import "./components/navbar";
-@import "./components/animista";
+@import "./components/_navbar";
+@import "./components/_animista";
 
 /* LAYOUT  */
 @import "./layout/_header.scss";
-@import "./layout/body";
-@import "./layout/main";
-@import "./layout/footer";
+@import "./layout/_body";
+@import "./layout/_main";
+@import "./layout/_section";
+@import "./layout/_footer";

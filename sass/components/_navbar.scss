@@ -2,6 +2,8 @@ nav{
     position: sticky;
     top: 0;
     .navbar{
+        margin: 0;
+        padding: 0;
         font-family: "Cormorant";
         font-weight: 900;
         font-size: 3rem;
@@ -9,7 +11,7 @@ nav{
         box-shadow: 0 3px 50px black;
         color: $color-naranjosuave;
         background-color: $color-verdetrans;
-        @include flex (flex, space-evenly, center, 5px, wrap);
+        @include flex (flex, space-evenly, center, 0, wrap);
         .nav_li{
             text-shadow: 0 3px 5px black;
             &:hover{
@@ -33,6 +35,14 @@ nav{
                 text-decoration: none;
             }
         }
+        .nav_li_estasaqui{
+            @extend .nav_li;
+            text-decoration: line-through;
+            text-decoration: underline;
+            text-shadow: 0 9px 15px black;
+            transform: scale(1.2);
+
+        }
     }
 }
 
@@ -44,6 +54,39 @@ nav{
                 .nav_icon{
                     width: 30px;
                 }
+            }
+        }
+    }
+}
+
+@media(max-width: 769px){
+    nav{
+        .navbar{
+            font-size: 1.5rem;
+            .nav_li{
+                .nav_icon{
+                    width: 20px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 453px){
+    nav{
+        .navbar{
+            .nav_li{
+                margin-right: 28px;
+            }
+        }
+    }
+}
+
+@media (max-width: 324px){
+    nav{
+        .navbar{
+            .nav_li{
+                margin-right: 0;
             }
         }
     }

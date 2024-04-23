@@ -26,7 +26,7 @@
     }
     .logo{
         width: 400px;
-        margin-top: 10px;
+        margin-top: 20px;
         border-radius:50%;
         -webkit-border-radius:50%;
         -moz-border-radius:50%;
@@ -109,7 +109,7 @@
 
 @media ( max-width: 990px) {
     .header_index{
-        height: 600px;
+        height: 700px;
         background-position-y: -100px;
         gap: 0;
         h1{
@@ -159,26 +159,26 @@
 
 @media ( max-width: 720px ){
     .header_index{
-        height: 600px;
+        height: 650px;
         background-position-y: 0px;
         h1{
-            font-size: 5rem;
+            font-size: 6rem;
             margin: 10px;
         }
         p{
             font-size: 1.5rem;
         }
         .logo{
-            width: 200px;
+            width: 250px;
         }
     }
 
     
     .header_gatos{
-        background-position-y: -265px;
-        height: 300px;
+        background-position-y: -210px;
+        height: 350px;
         .logo{
-            width: 0;
+            display: none;
         }
     }
 
@@ -187,7 +187,7 @@
     }
 
     .header_galeria{
-        background-position-y: -260px;
+        background-position-y: -215px;
     }
 }
 
