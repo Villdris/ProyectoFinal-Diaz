@@ -1,7 +1,7 @@
 .main_index{
     font-family: Cormorant;
     font-size: 2rem;
-    margin: 30px;
+    margin: 10px;
     text-align: center;
     @include grid (grid, repeat(12, 1fr), auto, center, center);
         .titulo_prinpipal{
@@ -39,4 +39,20 @@
 
 .main_plantas{
     height: 500px;
+}
+
+@media (max-width: 500px ){
+    .main_index{
+        .titulo_prinpipal{
+            font-size: 4rem ;
+        }
+        .imgmove{
+            width: 100%;
+            height: 100px;
+        }
+        .texto_final{
+            font-size: 2rem;
+            font-weight: 600;
+        }
+    }
 }

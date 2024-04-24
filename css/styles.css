@@ -6,15 +6,29 @@
   box-sizing: border-box; }
 
 /*  COMPONENTS  */
-.carrusel_uno {
-  grid-column: 1 / 4;
-  width: 300px;
-  height: 400px; }
+.carrusel_uno, .carrusel_dos {
+  grid-column: 1 / 4; }
 
 .carrusel_dos {
-  grid-column: 10 / 13;
-  width: 300px;
-  height: 400px; }
+  grid-column: 10 / 13; }
+
+@media (max-width: 1175px) {
+  .carrusel_uno, .carrusel_dos {
+    width: 250px; } }
+
+@media (max-width: 995px) {
+  .carrusel_uno, .carrusel_dos {
+    grid-column: 2 / 7; }
+  .carrusel_dos {
+    grid-column: 8 / 11;
+    grid-row: 2 / 3; } }
+
+@media (max-width: 615px) {
+  .carrusel_uno, .carrusel_dos {
+    grid-column: 1 / 13; }
+  .carrusel_dos {
+    grid-column: 1 / 13;
+    grid-row: 4 / 5; } }
 
 nav {
   position: sticky;
@@ -318,7 +332,7 @@ nav {
 .main_index {
   font-family: Cormorant;
   font-size: 2rem;
-  margin: 30px;
+  margin: 10px;
   text-align: center;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
@@ -353,6 +367,16 @@ nav {
 .main_plantas {
   height: 500px; }
 
+@media (max-width: 500px) {
+  .main_index .titulo_prinpipal {
+    font-size: 4rem; }
+  .main_index .imgmove, .main_index .imgmove_dos {
+    width: 100%;
+    height: 100px; }
+  .main_index .texto_final {
+    font-size: 2rem;
+    font-weight: 600; } }
+
 .bienvenida {
   grid-column: 4 / 10;
   text-align: center;
@@ -360,7 +384,16 @@ nav {
   text-shadow: 0 1px 15px black; }
   .bienvenida p {
     text-align: center;
-    font-size: 2rem; }
+    font-size: 2rem;
+    margin: 20px; }
+
+@media (max-width: 995px) {
+  .bienvenida {
+    grid-column: 1 / 13; } }
+
+@media (max-width: 500px) {
+  .bienvenida p {
+    font-size: 1.5rem; } }
 
 .poema {
   grid-column: 1 / 13;
@@ -371,19 +404,34 @@ nav {
   background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(https://tse3.mm.bing.net/th/id/OIG4.bBcDo9qbjnQHaQmmd2f2?pid=ImgGn);
   background-size: cover;
   background-position-y: -150px;
-  border-radius: 50%;
-  -webkit-border-radius: 50%;
-  -moz-border-radius: 50%;
-  -ms-border-radius: 50%;
-  -o-border-radius: 50%;
+  border: 5px double black;
+  box-shadow: 0 5px 15px black;
+  border-radius: 40%;
+  -webkit-border-radius: 40%;
+  -moz-border-radius: 40%;
+  -ms-border-radius: 40%;
+  -o-border-radius: 40%;
   margin-top: 120px;
   margin-bottom: 120px; }
+
+@media (max-width: 1210px) {
+  .poema {
+    font-size: 4rem; } }
+
+@media (max-width: 972px) {
+  .poema {
+    font-size: 3rem; } }
+
+@media (max-width: 738px) {
+  .poema {
+    font-size: 2rem; } }
 
 .contenedor {
   grid-column: 1 / 13;
   text-align: start; }
   .contenedor h3 {
-    font-size: 3rem; }
+    font-size: 3rem;
+    text-decoration: underline double; }
   .contenedor ul {
     list-style-type: none; }
     .contenedor ul .tarjeta_index {
@@ -392,7 +440,6 @@ nav {
       align-items: center;
       gap: 20px;
       flex-wrap: nowrap;
-      font-size: 3rem;
       background-color: #F9E8D9;
       padding: 10px;
       border-radius: 10%;
@@ -403,11 +450,11 @@ nav {
       margin-bottom: 120px;
       margin-top: 120px;
       box-shadow: 0 10px 15px #EE7214;
-      height: 400px; }
+      height: 360px; }
       .contenedor ul .tarjeta_index:nth-child(2n) {
         flex-direction: row-reverse; }
     .contenedor ul .tarjeta_img {
-      max-width: 700px;
+      max-width: 500px;
       min-width: 280px;
       box-shadow: 0 5px 10px black; }
       .contenedor ul .tarjeta_img img {
@@ -417,6 +464,32 @@ nav {
       color: #EE7214; }
     .contenedor ul p {
       font-size: 2rem; }
+
+@media (max-width: 828px) {
+  .contenedor h3 {
+    font-size: 2rem; }
+  .contenedor ul .tarjeta_index {
+    height: 300px; }
+  .contenedor ul h4 {
+    font-size: 2rem; }
+  .contenedor ul p {
+    font-size: 1.5rem; } }
+
+@media (max-width: 762px) {
+  .contenedor {
+    text-align: center; }
+    .contenedor ul {
+      padding: 10px; }
+      .contenedor ul .tarjeta_index {
+        flex-direction: column;
+        height: auto; }
+        .contenedor ul .tarjeta_index:nth-child(2n) {
+          flex-direction: column; }
+      .contenedor ul .tarjeta_img {
+        max-width: 500px;
+        min-width: 280px; }
+        .contenedor ul .tarjeta_img img {
+          width: 100%; } }
 
 .footer_index, .footer_gatos, .footer_plantas, .footer_consejos, .footer_galeria {
   background-image: url(https://tse4.mm.bing.net/th/id/OIG1.CKP4JS1BE1xlvEZMW5sj?pid=ImgGn);
