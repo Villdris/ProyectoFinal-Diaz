@@ -3,7 +3,6 @@
 }
 
 .carrusel_dos{
-    @extend .carrusel_uno;
     grid-column: 10 / 13;
 }
 
@@ -31,4 +30,8 @@
         grid-column: 1 / 13;
         grid-row: 4 / 5;
     }
+}
+
+.card-img-bottom{
+    width: 400px;
 }

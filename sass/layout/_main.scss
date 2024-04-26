@@ -34,7 +34,7 @@
 
 
 .main_gatos{
-    height: 500px;
+    @extend .main_index;
 }
 
 .main_plantas{

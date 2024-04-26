@@ -45,6 +45,11 @@
     margin-bottom: 120px;
 }
 
+.poema_gatos{
+    @extend .poema;
+    background-image: url(https://tse3.mm.bing.net/th/id/OIG1.MmLhLrNUYCBv2RHI8V2l?pid=ImgGn);
+}
+
 @media (max-width: 1210px){
     .poema{
         font-size: 4rem;
@@ -67,10 +72,14 @@
     h3{
         font-size: 3rem;
         text-decoration: underline double;
+        text-shadow: 0 3px 10px white;
+    }
+    p{
+        text-shadow: 0 3px 10px white;
     }
     ul{
         list-style-type: none;
-        .tarjeta_index{
+        .tarjeta{
             @include flex(flex, center, center, 20px, nowrap);
             background-color: $color-Beige;
             padding: 10px;
@@ -105,13 +114,69 @@
     }
 }
 
+.contenedor_gatos{
+    @extend .contenedor;
+    h3{
+        text-decoration: none;
+        border-top: 5px double black;
+        padding-top: 10px;
+    }
+    ul{
+        text-align: center;
+        padding: 10px;
+        .tarjeta_gatos{
+            @extend .tarjeta;
+            height: auto;
+        }
+        .tarjeta_img_gatos{
+            width: 2000px;
+        }
+    }
+}
+
+.contenedor_comunes{
+    @extend .contenedor_gatos;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+    gap: 30px;
+    h3{
+        grid-column: 1 / 5;
+    }
+    p{
+        grid-column: 1 / 5 ;
+    }
+    .tarjeta_comun{
+        border-radius: 15%;
+        -webkit-border-radius: 15%;
+        -moz-border-radius: 15%;
+        -ms-border-radius: 15%;
+        -o-border-radius: 15%;
+        background-color: $color-Beige;
+        box-shadow: 0 5px 15px $color-verde ;
+        h4{
+            text-align: center;
+            font-size: 2rem;
+            color: $color-naranjo;
+        }
+        p{
+            padding: 10px;
+        }
+    }
+}
+
+
+
+
 @media (max-width: 828px ){
     .contenedor{
         h3{
             font-size: 2rem;
         }
+        p{
+            font-size: 1.5rem;
+        }
         ul{
-            .tarjeta_index{
+            .tarjeta{
                 height: 300px;
             }
             h4{
@@ -128,7 +193,7 @@
         text-align: center;
         ul{
             padding: 10px;
-            .tarjeta_index{
+            .tarjeta{
                 flex-direction: column;
                 height: auto;
                 &:nth-child(2n){
@@ -142,6 +207,17 @@
                         width: 100%;
                     }
                 }
+        }
+    }
+
+    .contenedor_gatos{
+        ul{
+            .tarjeta_img_gatos{
+                width: 300px;
+                img{
+                    width: 300px;
+                }
+        }
         }
     }
 }
