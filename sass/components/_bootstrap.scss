@@ -35,3 +35,14 @@
 .card-img-bottom{
     width: 400px;
 }
+
+.d-block, .w-100{
+    box-shadow: 0 5px 15px black;
+    position: static;
+    border-radius: 20%;
+    -webkit-border-radius: 20%;
+    -moz-border-radius: 20%;
+    -ms-border-radius: 20%;
+    -o-border-radius: 20%;
+    margin-bottom: 20px;
+}

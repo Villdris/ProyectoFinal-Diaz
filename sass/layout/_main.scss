@@ -26,7 +26,7 @@
         }
         .texto_final{
             grid-column: 1 / 13;
-            font-size: 3rem;
+            font-size: 2.5rem;
             font-weight: 600;
             text-shadow: 0 5px 10px $color-naranjo ;
         }
@@ -38,7 +38,18 @@
 }
 
 .main_plantas{
-    height: 500px;
+    @extend .main_index;
+        .imgmove_tres{
+            @extend .imgmove;
+            background-image: url(https://tse1.mm.bing.net/th/id/OIG2.0hK9amCP.R059ia30SnT?pid=ImgGn);
+            background-position-y: 100px;
+            height: 300px
+        }
+        .texto_final_plantas{
+            @extend .texto_final;
+            text-shadow: 0 5px 15px $color-verde ;
+            text-align: start;
+        }
 }
 
 @media (max-width: 500px ){
@@ -51,7 +62,7 @@
             height: 100px;
         }
         .texto_final{
-            font-size: 2rem;
+            font-size: 1.7rem;
             font-weight: 600;
         }
     }

@@ -47,7 +47,15 @@
 
 .poema_gatos{
     @extend .poema;
-    background-image: url(https://tse3.mm.bing.net/th/id/OIG1.MmLhLrNUYCBv2RHI8V2l?pid=ImgGn);
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(https://tse3.mm.bing.net/th/id/OIG1.MmLhLrNUYCBv2RHI8V2l?pid=ImgGn);
+}
+
+.poema_plantas{
+    @extend .poema;
+    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    url(https://tse1.mm.bing.net/th/id/OIG1..6uaQpbR7HGKaZC.rDRX?pid=ImgGn);
+    background-position-y: -500px;
 }
 
 @media (max-width: 1210px){
@@ -62,7 +70,7 @@
 }
 @media (max-width: 738px){
     .poema{
-        font-size: 2rem;
+        font-size: 2.5rem;
     }
 }
 
@@ -107,6 +115,7 @@
             h4{
                 font-size: 3rem;
                 color: $color-naranjo;
+                font-weight: 700;
             }
             p{
                 font-size: 2rem;
@@ -134,6 +143,20 @@
     }
 }
 
+.contenedor_plantas{
+    @extend .contenedor_gatos;
+    margin-top: 80px;
+    ul{
+        .tarjeta_plantas{
+            @extend .tarjeta;
+            box-shadow: 0 10px 15px $color-verde;
+            h4{
+                color: $color-verde ;
+            }
+        }
+    }
+}
+
 .contenedor_comunes{
     @extend .contenedor_gatos;
     display: grid;
@@ -153,17 +176,24 @@
         -o-border-radius: 15%;
         background-color: $color-Beige;
         box-shadow: 0 5px 15px $color-verde ;
+        margin-bottom: 30px;
         h4{
             text-align: center;
             font-size: 2rem;
             color: $color-naranjo;
+            font-weight: 700;
         }
         p{
             padding: 10px;
         }
     }
+    .tarjeta_comun_plantas{
+        @extend .tarjeta_comun;
+        h4{
+            color: $color-verde;
+        }
+    }
 }
-
 
 
 
