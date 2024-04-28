@@ -1,6 +1,4 @@
 nav{
-    position: sticky;
-    top: 0;
     .navbar{
         margin: 0;
         padding: 0;
@@ -41,10 +39,10 @@ nav{
             text-decoration: underline;
             text-shadow: 0 9px 15px black;
             transform: scale(1.2);
-
         }
     }
 }
+
 
 @media (max-width: 1070px){
     nav{
