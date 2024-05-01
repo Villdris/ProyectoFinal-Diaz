@@ -1,3 +1,7 @@
+section{
+    grid-column: 1/ 13;
+}
+
 .bienvenida{
     grid-column: 4 / 10;
     text-align: center;
@@ -47,15 +51,22 @@
 
 .poema_gatos{
     @extend .poema;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
     url(https://tse3.mm.bing.net/th/id/OIG1.MmLhLrNUYCBv2RHI8V2l?pid=ImgGn);
 }
 
 .poema_plantas{
     @extend .poema;
-    background-image: linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
     url(https://tse1.mm.bing.net/th/id/OIG1..6uaQpbR7HGKaZC.rDRX?pid=ImgGn);
     background-position-y: -500px;
+}
+
+.poema_consejos{
+    @extend .poema;
+    background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),
+    url(https://tse1.mm.bing.net/th/id/OIG3.K1STclYAWX3lR0HD93hr?pid=ImgGn);
+    background-position-y: -600px;
 }
 
 @media (max-width: 1210px){
@@ -195,7 +206,21 @@
     }
 }
 
-
+@media(max-width: 1070px ){
+    .contenedor_plantas{
+        ul{
+            .tarjeta_plantas{
+                height: auto;
+                h4{
+                    font-size: 2rem;
+                }
+                p{
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
 
 @media (max-width: 828px ){
     .contenedor{
@@ -231,7 +256,7 @@
                 }
             }
                 .tarjeta_img{
-                    max-width: 500px;
+                    max-width: 100%;
                     min-width: 280px;
                     img{
                         width: 100%;
@@ -250,4 +275,78 @@
         }
         }
     }
+}
+
+.galeria{
+    @include flex(flex, center, start, 20px, nowrap);
+    .galeria_slot{
+        flex: 33.33333%;
+        .galeria_img{
+            max-width: 100%;
+            min-width: 310px;
+            margin-top: 20px;
+            border: 10px double $color-verde;
+            box-shadow: 0 5px 15px $color-naranjo;
+        }
+        .galeria_img2{
+            @extend .galeria_img;
+            box-shadow: 0 5px 15px $color-verde;
+        }
+    }
+    .galeria_slot_2{
+        @extend .galeria_slot;
+    }
+}
+
+@media (max-width: 1000px ){
+    .galeria{
+        flex-wrap: wrap;
+    }       
+}
+
+.formulario{
+    grid-column: 1 / 13;
+    background-color: rgba(255, 255, 255, 0.077);
+    margin: 50px auto 50px auto;
+    padding: 20px;
+    box-shadow: 0 5px 15px black;
+    text-align: center;
+    fieldset{
+        legend{
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: 30px;
+            text-decoration: underline;
+        }
+        .input{
+            margin-bottom: 20px;
+        }
+        .enviararchivo{
+            background-color: rgba(0, 0, 0, 0.188);
+            margin-top: 20px;
+            margin-bottom: 20px;
+            width: 100%;
+            .form-label{
+                text-decoration: underline;
+                font-size: 2rem;
+                font-weight: 700;
+            }
+        }
+        .boton{
+            text-align: center;
+        }
+    }
+}
+
+@media (max-width: 950px ) {
+    .formulario{
+        font-size: 1.5rem;
+        fieldset{
+            legend{
+                font-size: 2rem;
+            }
+            .enviararchivo{
+                font-size: 0.8rem;
+        }   }
+        }
 }

@@ -50,7 +50,6 @@
         .imgmove_tres{
             @extend .imgmove;
             background-image: url(https://tse1.mm.bing.net/th/id/OIG2.0hK9amCP.R059ia30SnT?pid=ImgGn);
-            background-position-y: 100px;
             height: 300px;
         }
         .imgmove_cuatro{
@@ -61,6 +60,14 @@
             @extend .texto_final;
             text-shadow: 0 3px 9px white ;
         }
+}
+
+.main_consejos{
+    @extend .main_index;
+}
+
+.main_galeria{
+    @extend .main_index
 }
 
 @media (max-width: 500px ){
