@@ -26,7 +26,7 @@
         }
         .texto_final{
             grid-column: 1 / 13;
-            font-size: 2.5rem;
+            font-size: 2rem;
             font-weight: 600;
             text-shadow: 0 5px 10px $color-naranjo ;
         }
@@ -68,6 +68,12 @@
 
 .main_galeria{
     @extend .main_index
+}
+
+@media (max-width: 980px){
+    .texto_final{
+        font-size: 1.5rem;
+    }
 }
 
 @media (max-width: 500px ){

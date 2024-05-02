@@ -537,7 +537,7 @@ nav .navbar {
     background-image: url(https://tse4.mm.bing.net/th/id/OIG4.UPCSv2qcKyvLKnT.rv9w?pid=ImgGn); }
   .main_index .texto_final, .main_gatos .texto_final, .main_plantas .texto_final, .main_consejos .texto_final, .main_galeria .texto_final, .main_plantas .texto_final_plantas {
     grid-column: 1 / 13;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 600;
     text-shadow: 0 5px 10px #EE7214; }
 
@@ -556,6 +556,10 @@ nav .navbar {
 
 .main_plantas .texto_final_plantas {
   text-shadow: 0 3px 9px white; }
+
+@media (max-width: 980px) {
+  .texto_final, .main_plantas .texto_final_plantas {
+    font-size: 1.5rem; } }
 
 @media (max-width: 500px) {
   .main_index .titulo_prinpipal, .main_gatos .titulo_prinpipal, .main_plantas .titulo_prinpipal, .main_consejos .titulo_prinpipal, .main_galeria .titulo_prinpipal {
@@ -628,7 +632,9 @@ section {
 
 @media (max-width: 738px) {
   .poema, .poema_gatos, .poema_plantas, .poema_consejos {
-    font-size: 2.5rem; } }
+    font-size: 2.5rem;
+    background-position-y: 0;
+    background-position-x: 500px; } }
 
 .contenedor, .contenedor_gatos, .contenedor_plantas, .contenedor_comunes {
   grid-column: 1 / 13;
